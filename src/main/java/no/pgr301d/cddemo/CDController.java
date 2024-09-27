@@ -8,7 +8,7 @@ class CDController {
 
     @GetMapping(path = "/")
     public String hello() {
-        return "hallo men endret på så det står noe annet her hahahahahahahaha";
+        return "hallo men endret på så det står noe annet her iusghdfuiyagzsodufgliyagxdyuigaweuiygfd<button>fet knapp<button/>";
     }
 
 }
