@@ -197,8 +197,9 @@ Prøv å bygge en Docker container
 
 Du må først huske å avslutte (Ctrl+c) applikasjonen du started med maven.
 Prøv å starte en container basert dette container image.  
+husk å sette porten du vil bruke med -p taggen
 ```sh
-docker run <image tag used above>
+docker run -p 8080:8080 <image tag used above>
 ```
 
 Når du starter en container, så lytter ikke applikasjonen i Cloud 9 på port  8080. Hvorfor ikke ? Hint; port mapping 
