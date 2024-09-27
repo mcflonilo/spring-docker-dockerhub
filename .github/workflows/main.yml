@@ -16,7 +16,7 @@ jobs:
       - name: Build Docker image
         run: |
           rev=$(git rev-parse --short HEAD)
-          docker build . -t hello:$rev
+          docker build -t laop003repo2 .
 
       - name: Log in to Docker Hub
         env:
@@ -40,5 +40,5 @@ jobs:
       - name: Push to AWS ECR
         run: |
           rev=$(git rev-parse --short HEAD)
-          docker tag hello:$rev 244530008913.dkr.ecr.eu-west-1.amazonaws.com/laop003repo2:$rev
-          docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/laop003repo2:$rev
+          docker tag laop003repo2:latest 244530008913.dkr.ecr.eu-west-1.amazonaws.com/laop003repo2:latest
+          docker push 244530008913.dkr.ecr.eu-west-1.amazonaws.com/laop003repo2:latest
